@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Passion+One:wght@400;700;900&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202020;
+    color: #ebebeb;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    place-items: center;
+}
+.titulo{
+    font-family: "Passion One", sans-serif;
+    font-size: 28pt;
+    color: #18d875;
+}
+.contenedor{
+    /* display: flex; */
+    width: 500px;
+    margin-left: 475px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Teko", sans-serif;
+    font-size: 22pt;
+}
+
+form {
+    width: 500px;
+    background-color: #40414f;
+    padding:30px 30px;
+    margin: 10px 30px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.formulario{
+    display: inline-flex;
+    width: 500px;
+    object-fit: cover;
+}
+.contenedor:hover {
+    overflow-x: auto;
+}
+  
+.contenedor::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores basados en WebKit (como Chrome y Safari) */
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 90%;
+    padding: 8px;
+    border: 1.5px solid #18d875;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    background-color: #343541;
+    color: #ebebeb;
+}
+
+button[type="submit"] {
+    width: 100px;
+    height: 40px;
+    background-color: #17c26a;
+    font-size: 14pt;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type="submit"]:hover{
+    background-color: #069af6;
+}
+
+
+/* Estilos para la previsualización de archivos */
+.miniatura {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    padding: 2px;
+    background-color: #fff;
+}
+
+#fecha{
+    text-align: center;
+    width: 90%;
+    height: 30px;
+    background-color: #343541;
+    color: #fff;
+    border-radius: 10px;
+    border: 1.5px solid #18d875;
+    margin-bottom: 25px;
+}
+
+.tipo-file {
+    width: 50%;
+    padding: 10px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    background: none;
+    border-bottom: none;
+    text-align: center;
+}
+
+/* Ocultar el texto "Ningún archivo seleccionado" */
+.tipo-file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.tipo-file::before {
+    content: 'Seleccionar archivo'; /* Texto personalizado */
+    display: inline-block;
+    background-color: #11894b; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 8px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.outer{
+    position: absolute;
+    margin: 0 50px;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+.button{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+}
+.outer .button, .outer span{
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.outer button{
+    background: #3e4642;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20pt;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 9;
+}
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span{
+    border-radius: 50px;
+}
+.outer{
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
